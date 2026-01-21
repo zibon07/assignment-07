@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Fix login bug",
+    "description": "Users cannot log in with correct credentials.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-01-05T09:30:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Update homepage UI",
+    "description": "Redesign homepage banner and layout.",
+    "customer": "Karim Ahmed",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-01-06T11:15:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Add payment gateway",
+    "description": "Integrate online payment system.",
+    "customer": "Nusrat Jahan",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2026-01-07T14:45:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Fix broken links",
+    "description": "Several links are returning 404 errors.",
+    "customer": "Tanvir Hasan",
+    "priority": "Low",
+    "status": "Completed",
+    "createdAt": "2026-01-08T08:20:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Optimize database",
+    "description": "Improve query performance and indexing.",
+    "customer": "Ayesha Akter",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-01-09T10:00:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Add search feature",
+    "description": "Users should be able to search products.",
+    "customer": "Sabbir Hossain",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-01-10T12:40:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Fix mobile responsiveness",
+    "description": "Layout breaks on small screen devices.",
+    "customer": "Mim Chowdhury",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-01-11T16:10:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Add user profile page",
+    "description": "Create profile section with edit options.",
+    "customer": "Farhan Kabir",
+    "priority": "Low",
+    "status": "Pending",
+    "createdAt": "2026-01-12T09:55:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Email notification system",
+    "description": "Send automatic email updates to users.",
+    "customer": "Sadia Islam",
+    "priority": "Medium",
+    "status": "Completed",
+    "createdAt": "2026-01-13T13:25:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Security audit",
+    "description": "Review system for security vulnerabilities.",
+    "customer": "Arif Mahmud",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2026-01-14T15:00:00Z"
+  }
+]

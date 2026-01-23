@@ -15,25 +15,28 @@ const ticketPromise = fetchTickets()
 
 function App() {
   const [clickedCards, setClickedCards] = useState([])
-
+  const [selectedTask, setSelectedTask] = useState([])
   const handleVisitedCards = (card) => {
     // console.log(card) //{...} 
     const newClickedCards = [...clickedCards, card]
     setClickedCards(newClickedCards)
-    addTasks()
+    setSelectedTask([...selectedTask, card])
+    document.getElementById("task-status").style.display = "none"
   }
 
-  const addTasks = () => {
-    console.log("add tasks clicked")
-  }
+
+
 
   return (
     <>
       <Navbar></Navbar>
       <Banner inProgress={clickedCards.length}></Banner>
       <Suspense fallback={"Tickets Data Coming"}>
-        <Customer_section ticketPromise={ticketPromise}
-          handleVisitedCards={handleVisitedCards}></Customer_section>
+        <Customer_section
+          ticketPromise={ticketPromise}
+          handleVisitedCards={handleVisitedCards}
+          selectedTask={selectedTask}
+          setSelectedTask={setSelectedTask}></Customer_section>
       </Suspense>
     </>
   )

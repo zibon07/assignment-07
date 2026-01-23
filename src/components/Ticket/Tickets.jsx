@@ -1,15 +1,15 @@
 import React from 'react';
 import calenderImg from '../../assets/calender.png'
 
-const Tickets = ({ tickets }) => {
-
-    console.log(tickets)
+const Tickets = ({ tickets, handleVisitedCards }) => {
+    // console.log(handleVisitedCards)
+    // console.log(tickets)
     return (
         <div className=''>
             <h3 className='text-2xl mt-3 font-semibold'>Customer Tickets</h3>
             <div className='grid grid-cols-2 mt-8 gap-3'>
                 {
-                    tickets.map(ticket => (<div className='w-full bg-gray-200 p-4 rounded-2xl grid '>
+                    tickets.map(ticket => (<div key={ticket.id} onClick={()=>handleVisitedCards(ticket)} className='w-full bg-gray-200 p-4 rounded-2xl grid '>
                         <div className='flex justify-between mt-3 items-center '>
                             <h4 className='text-xl font-semibold'>{ticket.title}</h4>
                             <button className='btn bg-green-300 rounded-4xl'>{ticket.priority}</button>

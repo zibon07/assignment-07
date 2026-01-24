@@ -1,22 +1,23 @@
 
 import Tickets from '../Ticket/Tickets';
 import Tasks from '../Tasks/Tasks';
-import { use } from 'react';
+// import { use } from 'react';
 
-const Customer_section = ({ ticketPromise, handleVisitedCards, selectedTask,completeTask,resolovedTask }) => {
+const Customer_section = ({ ticketList, handleVisitedCards, selectedTask, completeTask, resolvedTask }) => {
     // console.log(handleVisitedCards)
-    const tickets = use(ticketPromise)
+    // const tickets = use(ticketList)
     // console.log(tickets)
     return (
-        <div className='border-2 border-red-500 mt-10 w-312.5 mx-auto flex gap-15'>
+        <div className=' mt-10 md:w-312.5 mx-auto flex flex-col md:flex-row gap-15'>
             <Tickets
-                tickets={tickets}
+                tickets={ticketList}
                 handleVisitedCards={handleVisitedCards}
-                ></Tickets>
+            ></Tickets>
             <Tasks
                 selectedTask={selectedTask}
                 completeTask={completeTask}
-                resolovedTask={resolovedTask}></Tasks>
+                resolvedTask={resolvedTask}
+                tickets={ticketList}></Tasks>
         </div>
     );
 };

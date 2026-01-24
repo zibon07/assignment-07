@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BannerImg from "../../assets/vector1.png"
 const Banner = ({ inProgress,resolvedTask}) => {
     return (
         <div className='w-full mt-6 mx-auto flex flex-col md:flex-row md:justify-between gap-6 '>

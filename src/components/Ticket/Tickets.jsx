@@ -20,7 +20,7 @@ const Tickets = ({ tickets, handleVisitedCards }) => {
                         <div className='flex mt-3  justify-between items-center'>
                             <div className='flex mt-3 items-center'>
                                 <p>#{ticket.id}</p>
-                                <h5 className={`${ticket.priority=="High"?"text-red-500":"text-yellow-500"} text-md ml-2 font-semibold`}>{ticket.priority}</h5>
+                                <h5 className={`${ticket.priority == "High" ? "text-red-500" : "text-yellow-500"} text-md ml-2 font-semibold`}>{ticket.priority}</h5>
                             </div>
                             <div className='flex  mt-3 items-center gap-3'>
                                 <p>{ticket.customer}</p>

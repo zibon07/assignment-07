@@ -4,7 +4,8 @@ import Banner from './components/Banner/Banner';
 import Customer_section from './components/Customer_section/Customer_section';
 import React, { Suspense, useEffect, useState } from 'react'
 import ResolvedTask from './components/Customer_section/ResolvedTask/ResolvedTask';
-import { ToastContainer,toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -21,13 +22,13 @@ function App() {
   const [clickedCards, setClickedCards] = useState([])
   const [selectedTask, setSelectedTask] = useState([])
   const [resolvedTask, setResolvedTask] = useState([])
-  const [ticketList,setTicketList]=useState([])
+  const [ticketList, setTicketList] = useState([])
 
-useEffect(()=>{
-fetch("Tickets.json")
-.then(res=>res.json())
-.then(tickets=>setTicketList(tickets))
-},[])
+  useEffect(() => {
+    fetch("Tickets.json")
+      .then(res => res.json())
+      .then(tickets => setTicketList(tickets))
+  }, [])
 
   const handleVisitedCards = (card) => {
     // console.log(card) //{...} 
@@ -45,11 +46,11 @@ fetch("Tickets.json")
     // console.log(notResolvedTasks)
     setSelectedTask(notResolvedTasks)
     setResolvedTask([...resolvedTask, task])
-    const removedTicket =ticketList.filter((ticket)=>ticket.id!==task.id)
+    const removedTicket = ticketList.filter((ticket) => ticket.id !== task.id)
     console.log(removedTicket)
     // console.log(reslovedTask)
     setTicketList(removedTicket)
-    
+
 
 
   }
@@ -58,7 +59,7 @@ fetch("Tickets.json")
     <>
       <Navbar></Navbar>
       <Banner inProgress={selectedTask.length}
-      resolvedTask={resolvedTask}></Banner>
+        resolvedTask={resolvedTask}></Banner>
       <Suspense fallback={"Tickets Data Coming"}>
         <Customer_section
           ticketList={ticketList}
@@ -68,6 +69,7 @@ fetch("Tickets.json")
           completeTask={completeTask}
           resolvedTask={resolvedTask}></Customer_section>
       </Suspense>
+      <Footer></Footer>
       <ToastContainer />
     </>
   )

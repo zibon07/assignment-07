@@ -1,13 +1,13 @@
 import React from 'react';
 
-const ResolvedTask = () => {
+const ResolvedTask = ({resolovedTask}) => {
     return (
-        <div className='border-2 border-red-500 p-6'>
-            <p>No resolved tasks yet.</p>
+        resolovedTask.map(task=>(<div className='border-2 border-red-500  p-6'>
+            
             <div className='bg-gray-200 p-2 rounded-2xl'>
-                <h3 className='font-semibold text-center text-lg '>Incorrect Billing Address</h3>
+                <h3 className='font-semibold text-center text-lg '>{task.title}</h3>
             </div>
-        </div>
+        </div>))
     );
 };
 
